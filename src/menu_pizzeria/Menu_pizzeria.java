@@ -25,6 +25,8 @@ public class Menu_pizzeria {
         System.out.println("3: Quitar ingrediente");
         System.out.println("4: Elegir masa");
         System.out.println("5: Cancelar pedido");
+        
+        System.out.println("prueba oscar");
 
    
 }
