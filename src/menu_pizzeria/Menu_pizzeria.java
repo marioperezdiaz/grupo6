@@ -5,6 +5,8 @@
  */
 package menu_pizzeria;
 
+import java.util.Scanner;
+
 /**
  *
  * @author DAM123
@@ -16,9 +18,20 @@ public class Menu_pizzeria {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Scanner teclado=new Scanner(System.in);
+        int opcion;
+        do{
         System.out.println("Menu:");
-        System.out.println("    1- ");
+        System.out.println("    1- Anadir pizza");
+        System.out.println("    2- Anadir ingrediente pizza");
+        System.out.println("    3- Cambiar el tamano de las pizzas");
+        System.out.println("    4- Eliminar pizzas");
+        System.out.println("    5- Obtener ticket");
+        System.out.println("    6- Salir");
         
+        opcion=teclado.nextInt();
+        }
+        while (opcion!=6);
     }
     
 }
