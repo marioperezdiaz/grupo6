@@ -34,36 +34,35 @@ public class Menu_pizzeria {
         int contadorpizzasingredientes=0;
         int contadoringredientes=0;
         
-        while(opcion!=6){
-            switch(opcion){
+        while (opcion != 6) {
+            switch (opcion) {
                 case 1:
                     System.out.println("Cuantas pizzas desea pedir?");
-                    contadorpizzasbasicas=contadorpizzasbasicas+teclado.nextInt();
+                    contadorpizzasbasicas = contadorpizzasbasicas + teclado.nextInt();
                     break;
                 case 2:
                     System.out.println("A cuantas pizzas desea añadir ingredientes?");
-                    contadorpizzasingredientes=teclado.nextInt();
-                    while (contadorpizzasingredientes>contadorpizzasbasicas){
-                        System.out.println("No tiene tantas pizzas, introduza un numero menor al de pizzas ordenadas:"+contadorpizzasbasicas);
-                        contadorpizzasingredientes=teclado.nextInt();
+                    contadorpizzasingredientes = teclado.nextInt();
+                    while (contadorpizzasingredientes > contadorpizzasbasicas) {
+                        System.out.println("No tiene tantas pizzas, introduza un numero menor al de pizzas ordenadas: " + contadorpizzasbasicas);
+                        contadorpizzasingredientes = teclado.nextInt();
                     }
-                    
-                    
+                    contadorpizzasbasicas = contadorpizzasbasicas - contadorpizzasingredientes;
+
                     System.out.println("Desea añadir alguno de los siguientes ingredientes?"
                             + "(1.Queso, 2.tomate, 3.peperoni, 4.bacon, 0.no añadir ingredientes)");
-                    int respuesta=teclado.nextInt();
-                    while (respuesta!=0){
-                        if (respuesta>=1 && respuesta<=4){
-                            
-                        }
+                    int respuesta = teclado.nextInt();
+
+                    while (respuesta > 4 | respuesta < 0) {
+                        System.out.println("No ha escogido una respuesta correcta. Escoja (1.Queso, 2.tomate, 3.peperoni, 4.bacon, 0.no añadir ingredientes)");
+                        respuesta = teclado.nextInt();
                     }
-                    
-                    
+                    if (respuesta >= 1 && respuesta <= 4) {
+                        contadoringredientes++;
+                    }
             }
+
         }
+    }
 
-
-   
-}
-    
 }
