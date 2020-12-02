@@ -19,14 +19,43 @@ public class Menu_pizzeria {
     public static void main(String[] args) {
         // TODO code application logic here
       Scanner teclado=new Scanner(System.in);
-        System.out.println(": Introduce una opción: ");
-        System.out.println("1: Pedir pizza simple");
-        System.out.println("2: Añadir ingrediente");
-        System.out.println("3: Quitar ingrediente");
-        System.out.println("4: Elegir masa");
-        System.out.println("5: Cancelar pedido");
+      
+        System.out.println("MENU:");
+        System.out.println("    1. Añadir pizzas");
+        System.out.println("    2. Añadir ingrediente");
+        System.out.println("    3. Cambiar tamño pizzas");
+        System.out.println("    4. Eliminar pizzas");
+        System.out.println("    5. Calcular ticket");
+        System.out.println("    6. Salir");
         
-        System.out.println("prueba oscar");
+        int opcion=teclado.nextInt();
+        
+        int contadorpizzasbasicas=0;
+        int contadorpizzasingredientes=0;
+        int contadoringredientes=0;
+        
+        while(opcion!=6){
+            switch(opcion){
+                case 1:
+                    System.out.println("Cuantas pizzas desea pedir?");
+                    contadorpizzasbasicas=contadorpizzasbasicas+teclado.nextInt();
+                    break;
+                case 2:
+                    System.out.println("A cuantas pizzas desea añadir ingredientes?");
+                    contadorpizzasingredientes=teclado.nextInt();
+                    System.out.println("Desea añadir alguno de los siguientes ingredientes?"
+                            + "(1.Queso, 2.tomate, 3.peperoni, 4.bacon, 0.no añadir ingredientes)");
+                    int respuesta=teclado.nextInt();
+                    while (respuesta!=0){
+                        if (respuesta>=1 && respuesta<=4){
+                            
+                        }
+                    }
+                    
+                    
+            }
+        }
+
 
    
 }
