@@ -82,6 +82,7 @@ public class Menu_pizzeria {
             System.out.println("    6. Salir");
             opcion = teclado.nextInt();
         }
+        System.out.println("El programa ha finalizado");
     }
 
 }
