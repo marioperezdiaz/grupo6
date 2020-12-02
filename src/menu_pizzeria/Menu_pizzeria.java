@@ -32,7 +32,6 @@ public class Menu_pizzeria {
         
         int contadorpizzasbasicas=0;
         int contadorpizzasingredientes=0;
-        int contadoringredientes=0;
         
         while (opcion != 6) {
             switch (opcion) {
@@ -40,26 +39,24 @@ public class Menu_pizzeria {
                     System.out.println("Cuantas pizzas desea pedir?");
                     contadorpizzasbasicas = contadorpizzasbasicas + teclado.nextInt();
                     break;
+                    
                 case 2:
-                    System.out.println("A cuantas pizzas desea añadir ingredientes?");
-                    contadorpizzasingredientes = teclado.nextInt();
-                    while (contadorpizzasingredientes > contadorpizzasbasicas) {
-                        System.out.println("No tiene tantas pizzas, introduza un numero menor al de pizzas ordenadas: " + contadorpizzasbasicas);
-                        contadorpizzasingredientes = teclado.nextInt();
-                    }
-                    contadorpizzasbasicas = contadorpizzasbasicas - contadorpizzasingredientes;
+                    System.out.println("Cuantas pizzas con ingredientes deseas pedir?");
+                    contadorpizzasingredientes = contadorpizzasingredientes+teclado.nextInt();
 
-                    System.out.println("Desea añadir alguno de los siguientes ingredientes?"
-                            + "(1.Queso, 2.tomate, 3.peperoni, 4.bacon, 0.no añadir ingredientes)");
+                    System.out.println("Que ingrediente desea añadir?"
+                            + "(1.Queso, 2.tomate, 3.peperoni, 4.bacon)");
                     int respuesta = teclado.nextInt();
 
-                    while (respuesta > 4 | respuesta < 0) {
-                        System.out.println("No ha escogido una respuesta correcta. Escoja (1.Queso, 2.tomate, 3.peperoni, 4.bacon, 0.no añadir ingredientes)");
+                    while (respuesta > 4 | respuesta < 1) {
+                        System.out.println("No ha escogido una respuesta correcta. Escoja (1.Queso, 2.tomate, 3.peperoni, 4.bacon)");
                         respuesta = teclado.nextInt();
                     }
-                    if (respuesta >= 1 && respuesta <= 4) {
-                        contadoringredientes++;
-                    }
+                    break;
+                
+                case 3:
+                    
+                    
             }
 
         }
