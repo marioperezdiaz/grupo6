@@ -43,6 +43,12 @@ public class Menu_pizzeria {
                 case 2:
                     System.out.println("A cuantas pizzas desea añadir ingredientes?");
                     contadorpizzasingredientes=teclado.nextInt();
+                    while (contadorpizzasingredientes>contadorpizzasbasicas){
+                        System.out.println("No tiene tantas pizzas, introduza un numero menor al de pizzas ordenadas:"+contadorpizzasbasicas);
+                        contadorpizzasingredientes=teclado.nextInt();
+                    }
+                    
+                    
                     System.out.println("Desea añadir alguno de los siguientes ingredientes?"
                             + "(1.Queso, 2.tomate, 3.peperoni, 4.bacon, 0.no añadir ingredientes)");
                     int respuesta=teclado.nextInt();
